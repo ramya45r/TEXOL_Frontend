@@ -83,3 +83,80 @@
   font-size: 1.5rem;
   padding: 2rem;
 }
+.btn {
+  padding: 8px 14px;
+  border: none;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.btn-update {
+  background: #007bff;
+  color: white;
+}
+
+.btn-update:hover {
+  background: #0056b3;
+}
+
+.update-form {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  background: #fafafa;
+  border-radius: 6px;
+  max-width: 400px;
+}
+
+.update-form input,
+.update-form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn-cancel {
+  background: #aaa;
+  color: white;
+}
+
+.btn-cancel:hover {
+  background: #888;
+}
