@@ -14,6 +14,11 @@ export const CartProvider = ({ children }) => {
   };
   const remove = (productId) => save(items.filter(i=>i.product!==productId));
   const updateQty = (productId, qty) => save(items.map(i=> i.product===productId? {...i, qty}: i));
-  return <CartContext.Provider value={{ items, add, remove, updateQty }}>{children}</CartContext.Provider>;
+   const clear = () => {
+    setItems([]);
+    localStorage.removeItem('cart');
+  };
+  return <CartContext.Provider value={{ items, add, remove, updateQty,clear }}>{children}</CartContext.Provider>;
 };
+
 export default CartContext;

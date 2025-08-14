@@ -5,14 +5,14 @@ import API from '../api/axios';
 import AuthContext from '../contexts/AuthContext';
 
 export default function CartPage(){
-  const { items, remove, updateQty } = useContext(CartContext);
+  const { items, remove, updateQty,clear } = useContext(CartContext);
   const { user } = React.useContext(AuthContext);
   const nav = useNavigate();
   const checkout = async () => {
     if (!user) return nav('/login');
     const shipping = { street:'', city:'', state:'', zip:'' };
-    await API.post('/orders', { items, shippingAddress: shipping }, { headers: { Authorization: 'Bearer ' + localStorage.getItem('token') }});
-    localStorage.removeItem('cart');
+    await API.post('/orders/', { items, shippingAddress: shipping }, { headers: { Authorization: 'Bearer ' + localStorage.getItem('token') }});
+    clear()
     nav('/');
   };
   return (

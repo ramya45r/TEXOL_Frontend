@@ -10,6 +10,7 @@ import { AuthProvider } from './contexts/AuthContext';
 import { CartProvider } from './contexts/CartContext';
 import PrivateRoute from './components/PrivateRoute';
 import AuthContext from './contexts/AuthContext';
+import OrdersPage from './pages/OrdersPage';
 
 function AppContent() {
   const { user, logout } = useContext(AuthContext);
@@ -30,7 +31,10 @@ function AppContent() {
             {user.role === 'admin' ? (
               <Link to="/admin">Admin</Link>
             ) : (
-              <Link to="/cart">Cart</Link>
+              <>
+                <Link to="/cart">Cart</Link>
+                <Link to="/orders">Orders</Link>
+              </>
             )}
             <button onClick={logout}>Logout</button>
           </>
@@ -57,6 +61,8 @@ function AppContent() {
         />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+                <Route path="/orders" element={<OrdersPage />} />
+
         <Route
           path="/admin"
           element={
