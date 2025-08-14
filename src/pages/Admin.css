@@ -1,0 +1,90 @@
+.admin-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  font-family: Arial, sans-serif;
+}
+
+.admin-container h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.product-count {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.toggle-btn {
+  padding: 10px 15px;
+  background: #4a90e2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 15px;
+  transition: background 0.3s;
+}
+
+.toggle-btn:hover {
+  background: #357abd;
+}
+
+.create-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.create-form input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.create-form input:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+.save-btn {
+  padding: 10px 15px;
+  background: #27ae60;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.save-btn:hover {
+  background: #1f8c4d;
+}
+
+.product-list {
+  list-style: none;
+  padding: 0;
+}
+
+.product-list li {
+  background: #f1f1f1;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+}
+
+.note {
+  font-size: 13px;
+  color: #777;
+  margin-top: 15px;
+}
